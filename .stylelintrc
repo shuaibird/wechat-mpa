@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "color-hex-case": "lower"
+  }
+}
