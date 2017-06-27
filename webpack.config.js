@@ -14,6 +14,7 @@ const commonConfig = merge([
       filename: '[name].[hash].js',
     },
   },
+  build.resolve(),
   build.lintJs({ include: PATHS.src }),
   build.lintScss({ include: PATHS.src }),
   build.loadJs({ include: PATHS.src }),

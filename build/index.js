@@ -6,6 +6,7 @@ exports.lintJs = require('./src/lintJs')
 exports.lintScss = require('./src/lintScss')
 exports.loadImg = require('./src/loadImg')
 exports.defineConst = require('./src/defineConst')
+exports.resolve = require('./src/resolve')
 
 // Development configs
 exports.devServer = require('./src/devServer')
