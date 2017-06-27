@@ -54,7 +54,7 @@ const productionConfig = merge([
   build.minifyJs(),
   build.loadImg({
     options: {
-      limit: 15000,
+      limit: 10000,
       name: '[name].[hash].[ext]',
     },
   }),
@@ -77,10 +77,10 @@ module.exports = (env) => {
   const config = env === 'production' ? productionConfig : developmentConfig
   const pages = [
     build.page({
-      entry: { auth: path.resolve(PATHS.src, 'pages/auth') },
+      entry: { 'auth-company': path.resolve(PATHS.src, 'pages/auth-company') },
       title: '绑定微信',
-      filename: 'auth.html',
-      template: 'src/templates/auth.html',
+      filename: 'auth-company.html',
+      template: 'src/pages/auth-company/template.html',
     }),
   ]
   return pages.map(page => merge(commonConfig, config, page))
