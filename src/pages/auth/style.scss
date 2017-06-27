@@ -1,3 +1,13 @@
+@import '~scss/helpers/index';
+@import '~scss/components/card';
+
 .jumbotron {
   width: 100%;
+}
+
+.card-wrapper {
+  width: 100%;
+  padding: 0 15px;
+  position: absolute;
+  top: 60px;
 }
