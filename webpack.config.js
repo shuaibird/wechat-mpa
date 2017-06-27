@@ -25,6 +25,7 @@ const developmentConfig = merge([
     port: process.env.PORT,
   }),
   build.loadScss({ include: PATHS.src }),
+  build.loadImg(),
 ])
 
 const productionConfig = merge([
@@ -42,6 +43,12 @@ const productionConfig = merge([
     ],
   }),
   build.minifyJs(),
+  build.loadImg({
+    options: {
+      limit: 15000,
+      name: '[name].[hash].[ext]',
+    },
+  }),
 ])
 
 module.exports = (env) => {
