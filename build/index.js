@@ -5,6 +5,7 @@ exports.loadScss = require('./loadScss')
 exports.lintJs = require('./lintJs')
 exports.lintScss = require('./lintScss')
 exports.loadImg = require('./loadImg')
+exports.defineConst = require('./defineConst')
 
 // Development configs
 exports.devServer = require('./devServer')

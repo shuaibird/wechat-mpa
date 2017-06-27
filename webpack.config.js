@@ -26,6 +26,9 @@ const developmentConfig = merge([
   }),
   build.loadScss({ include: PATHS.src }),
   build.loadImg(),
+  build.defineConst({
+    'HOST': '"http://dev.bluewizard.cloudist.cc"',
+  }),
 ])
 
 const productionConfig = merge([
@@ -48,6 +51,9 @@ const productionConfig = merge([
       limit: 15000,
       name: '[name].[hash].[ext]',
     },
+  }),
+  build.defineConst({
+    'HOST': '""',
   }),
 ])
 
