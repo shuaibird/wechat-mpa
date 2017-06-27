@@ -11,7 +11,7 @@ const commonConfig = merge([
   {
     output: {
       path: PATHS.dist,
-      filename: '[name].[hash].js',
+      filename: '[name].[chunkhash].js',
     },
   },
   build.resolve(),
@@ -33,6 +33,11 @@ const developmentConfig = merge([
 ])
 
 const productionConfig = merge([
+  {
+    entry: {
+      vendor: ['./src/vendors/ajax.js'],
+    },
+  },
   build.cleanDir({
     path: PATHS.dist,
     root: __dirname,
@@ -56,6 +61,16 @@ const productionConfig = merge([
   build.defineConst({
     'HOST': '""',
   }),
+  build.extractBundles([
+    {
+      name: 'vendor',
+      minChunks: ({ resource }) => (
+        resource &&
+        resource.indexOf('node_modules') >= 0 &&
+        resource.match(/\.js$/)
+      ),
+    },
+  ]),
 ])
 
 module.exports = (env) => {
