@@ -1,5 +1,6 @@
 module.exports = ({ host, port } = {}) => ({
   devServer: {
+    disableHostCheck: true,
     historyApiFallback: true,
     stats: 'errors-only',
     host,
