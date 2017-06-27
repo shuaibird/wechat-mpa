@@ -51,6 +51,7 @@ module.exports = (env) => {
       entry: { auth: path.resolve(PATHS.src, 'pages/auth') },
       title: '绑定微信',
       filename: 'auth.html',
+      template: 'src/templates/default.html',
     }),
   ]
   return pages.map(page => merge(commonConfig, config, page))

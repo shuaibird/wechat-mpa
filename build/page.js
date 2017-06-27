@@ -4,6 +4,7 @@ module.exports = ({
   entry,
   filename,
   title = '',
+  template,
 } = {}) => ({
   entry,
   plugins: [
@@ -15,6 +16,7 @@ module.exports = ({
         collapseInlineTagWhitespace: true,
         collapseWhitespace: true,
       },
+      template,
     }),
   ],
 })
