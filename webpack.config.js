@@ -11,7 +11,7 @@ const commonConfig = merge([
   {
     output: {
       path: PATHS.dist,
-      filename: '[name].[chunkhash].js',
+      filename: '[name].[hash].js',
     },
   },
   build.resolve(),
@@ -21,6 +21,12 @@ const commonConfig = merge([
 ])
 
 const developmentConfig = merge([
+  {
+    output: {
+      devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]',
+    },
+  },
+  build.generateSourceMaps({ type: 'cheap-module-eval-source-map' }),
   build.devServer({
     host: process.env.HOST,
     port: process.env.PORT,
@@ -71,6 +77,7 @@ const productionConfig = merge([
       ),
     },
   ]),
+  build.generateSourceMaps({ type: 'source-map' }),
 ])
 
 module.exports = (env) => {
@@ -78,7 +85,7 @@ module.exports = (env) => {
   const pages = [
     build.page({
       entry: { 'auth-company': path.resolve(PATHS.src, 'pages/auth-company') },
-      title: '绑定微信',
+      title: '输入企业号',
       filename: 'auth-company.html',
       template: 'src/pages/auth-company/template.html',
     }),

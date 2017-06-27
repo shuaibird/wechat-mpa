@@ -1,5 +1,8 @@
+const webpack = require('webpack')
+
 module.exports = ({ host, port } = {}) => ({
   devServer: {
+    compress: true,
     disableHostCheck: true,
     historyApiFallback: true,
     stats: 'errors-only',
@@ -10,4 +13,8 @@ module.exports = ({ host, port } = {}) => ({
       warning: true,
     },
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
 })

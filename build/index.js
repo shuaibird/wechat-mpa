@@ -7,6 +7,7 @@ exports.lintScss = require('./src/lintScss')
 exports.loadImg = require('./src/loadImg')
 exports.defineConst = require('./src/defineConst')
 exports.resolve = require('./src/resolve')
+exports.generateSourceMaps = require('./src/generateSourceMaps')
 
 // Development configs
 exports.devServer = require('./src/devServer')

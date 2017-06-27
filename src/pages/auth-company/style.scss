@@ -6,11 +6,35 @@
 
 .card-wrapper {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 30px;
   position: absolute;
-  top: 60px;
-}
+  top: 120px;
 
-.card {
-  @extend %card;
+  .card {
+    @extend %card;
+
+    .logo {
+      display: block;
+      margin: 0 auto 40px;
+    }
+
+    .slogan {
+      font-size: 54px;
+      color: $color-gray-darker;
+      text-align: center;
+    }
+
+    .input {
+      @extend %input;
+      margin-top: 300px;
+    }
+
+    .submit {
+      @extend %button;
+      margin-top: 48px;
+      background: $color-primary;
+      border: none;
+      color: $color-white;
+    }
+  }
 }
