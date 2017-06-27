@@ -1,18 +1,18 @@
 // Common onfigs
-exports.page = require('./page')
-exports.loadJs = require('./loadJs')
-exports.loadScss = require('./loadScss')
-exports.lintJs = require('./lintJs')
-exports.lintScss = require('./lintScss')
-exports.loadImg = require('./loadImg')
-exports.defineConst = require('./defineConst')
+exports.page = require('./src/page')
+exports.loadJs = require('./src/loadJs')
+exports.loadScss = require('./src/loadScss')
+exports.lintJs = require('./src/lintJs')
+exports.lintScss = require('./src/lintScss')
+exports.loadImg = require('./src/loadImg')
+exports.defineConst = require('./src/defineConst')
 
 // Development configs
-exports.devServer = require('./devServer')
+exports.devServer = require('./src/devServer')
 
 // Production configs
-exports.cleanDir = require('./cleanDir')
-exports.autoprefix = require('./autoprefix')
-exports.extractScss = require('./extractScss')
-exports.minifyCss = require('./minifyCss')
-exports.minifyJs = require('./minifyJs')
+exports.cleanDir = require('./src/cleanDir')
+exports.autoprefix = require('./src/autoprefix')
+exports.extractScss = require('./src/extractScss')
+exports.minifyCss = require('./src/minifyCss')
+exports.minifyJs = require('./src/minifyJs')
