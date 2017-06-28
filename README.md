@@ -41,6 +41,6 @@ $ npm run lint:scss
 
 * **src/vendors**: The scripts inside would be pull out from the code into a separate `vendor` script, which would be included in every generated html page. Config the webpack when new file is added.
 
-### others
+## others
 * Install the [EditorConfig](http://editorconfig.org/) plugin for consistent indentation through the whole project
 * Completely unnecessary to vendor prefix the css manually as it would be done by the `autoprefixer` plugin. Modify the `.browserslistrc` file when it's needed.
