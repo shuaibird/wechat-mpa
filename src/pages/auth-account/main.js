@@ -38,7 +38,7 @@ const renderComponent = (logo, name) =>
           ${logo ? `<img class="logo" src="${logo}" width="60" alt="公司logo" />` : ''}
           <p class="company">${name}</p>
           <input class="username" placeholder="个人帐号" ／>
-          <input class="password" placeholder="密码" ／>
+          <input class="password" type="password" placeholder="密码" ／>
           <button class="submit is-disabled">确定绑定</button>
         </div>
       </div>
