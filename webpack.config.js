@@ -118,7 +118,7 @@ module.exports = (env) => {
       filename: 'meeting-list.html',
       template,
       inlineCss,
-    })
+    }),
   ]
   return pages.map(page => merge(commonConfig, config, page))
 }

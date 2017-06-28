@@ -1,5 +1,7 @@
 @import '~scss/index';
 
+@include global;
+
 .jumbotron {
   width: 100%;
 }
