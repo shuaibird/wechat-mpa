@@ -90,21 +90,21 @@ module.exports = (env) => {
   const template = 'src/templates/default.html'
   const pages = [
     build.page({
-      entry: { 'auth-company': path.resolve(PATHS.src, 'pages/auth-company') },
+      entry: { 'auth-company': path.resolve(PATHS.src, 'pages/module-auth/auth-company') },
       title: '绑定企业帐号',
       filename: 'auth-company.html',
       template,
       inlineCss,
     }),
     build.page({
-      entry: { 'auth-account': path.resolve(PATHS.src, 'pages/auth-account') },
+      entry: { 'auth-account': path.resolve(PATHS.src, 'pages/module-auth/auth-account') },
       title: '绑定个人帐号',
       filename: 'auth-account.html',
       template,
       inlineCss,
     }),
     build.page({
-      entry: { 'auth-binded': path.resolve(PATHS.src, 'pages/auth-binded') },
+      entry: { 'auth-binded': path.resolve(PATHS.src, 'pages/module-auth/auth-binded') },
       title: '帐号绑定信息',
       filename: 'auth-binded.html',
       template,
