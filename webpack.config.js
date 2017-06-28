@@ -70,6 +70,7 @@ const productionConfig = merge([
   build.extractBundles([
     {
       name: 'vendor',
+      filename: '[name].js',
       minChunks: ({ resource }) => (
         resource &&
         resource.indexOf('node_modules') >= 0 &&
@@ -81,19 +82,22 @@ const productionConfig = merge([
 ])
 
 module.exports = (env) => {
-  const config = env === 'production' ? productionConfig : developmentConfig
+  const config = (env === 'production') ? productionConfig : developmentConfig
+  const inlineCss = (env === 'production')
   const pages = [
     build.page({
       entry: { 'auth-company': path.resolve(PATHS.src, 'pages/auth-company') },
       title: '输入企业号',
       filename: 'auth-company.html',
       template: 'src/pages/auth-company/template.html',
+      inlineCss,
     }),
     build.page({
       entry: { 'auth-account': path.resolve(PATHS.src, 'pages/auth-account') },
       title: '绑定个人账号',
       filename: 'auth-account.html',
       template: 'src/pages/auth-account/template.html',
+      inlineCss,
     }),
   ]
   return pages.map(page => merge(commonConfig, config, page))
