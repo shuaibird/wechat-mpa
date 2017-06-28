@@ -16,9 +16,10 @@
     .logo {
       display: block;
       margin: 0 auto 40px;
+      border-radius: 50%;
     }
 
-    .slogan {
+    .company {
       font-size: 54px;
       color: $color-gray-darker;
       text-align: center;
@@ -27,6 +28,10 @@
     .username,
     .password {
       @extend %input;
+    }
+
+    .password {
+      margin-top: 40px;
     }
 
     .submit {

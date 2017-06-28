@@ -2,14 +2,14 @@
   padding: 60px 40px;
   background: $color-white;
   box-shadow: 0px 2px 14px $color-primary-shadow;
-  @include border-radius;
+  border-radius: $default-border-radius;
 }
 
 %input {
   width: 100%;
   display: block;
   border: 1px solid $color-gray-light;
-  @include border-radius;
+  border-radius: $default-border-radius;
   height: 80px;
   font-size: 32px;
   padding: {
@@ -25,7 +25,7 @@
 %button {
   width: 100%;
   display: block;
-  @include border-radius;
+  border-radius: $default-border-radius;
   height: 80px;
   font-size: 32px;
 }
