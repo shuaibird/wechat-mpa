@@ -15,7 +15,7 @@ const getToken = (code, callback) =>
     })
     .catch(() => redirect(delUrlParam(window.location.href, 'code')))
 
-export default (scope = 'snsapi_base', callback) => {
+export default (callback, scope = 'snsapi_base') => {
   const code = getUrlParam('code')
   if (!code) oauth(scope)
   else getToken(code, callback)

@@ -1,7 +1,6 @@
-// import wechat from 'vendors/wechat'
-import main from './main'
+import wechat from 'vendors/wechat'
 
-main()
-
-// wechat('snsapi_userinfo', () => {
-// })
+wechat(
+  () => import('./main').then(({ default: loadModule }) => loadModule()),
+  'snsapi_userinfo'
+)
