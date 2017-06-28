@@ -1,0 +1,9 @@
+@mixin ellipsis() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin box-shadow($h: 0px, $v: 2px, $blur: 14px, $color: $color-white) {
+  box-shadow: $h $v $blur $color;
+}

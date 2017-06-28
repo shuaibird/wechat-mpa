@@ -89,6 +89,7 @@ module.exports = (env) => {
   const inlineCss = (env === 'production')
   const template = 'src/templates/default.html'
   const pages = [
+    // module-auth
     build.page({
       entry: { 'auth-company': path.resolve(PATHS.src, 'pages/module-auth/auth-company') },
       title: '绑定企业帐号',
@@ -110,6 +111,14 @@ module.exports = (env) => {
       template,
       inlineCss,
     }),
+    // module-meeting
+    build.page({
+      entry: { 'meeting-list': path.resolve(PATHS.src, 'pages/module-meeting/meeting-list') },
+      title: '我的会议',
+      filename: 'meeting-list.html',
+      template,
+      inlineCss,
+    })
   ]
   return pages.map(page => merge(commonConfig, config, page))
 }
