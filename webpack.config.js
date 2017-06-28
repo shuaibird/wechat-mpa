@@ -87,7 +87,7 @@ const productionConfig = merge([
 module.exports = (env) => {
   const config = (env === 'production') ? productionConfig : developmentConfig
   const inlineCss = (env === 'production')
-  const template = 'src/pages/templates/default.html'
+  const template = 'src/templates/default.html'
   const pages = [
     build.page({
       entry: { 'auth-company': path.resolve(PATHS.src, 'pages/auth-company') },
