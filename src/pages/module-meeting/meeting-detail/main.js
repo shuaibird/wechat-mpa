@@ -6,6 +6,7 @@ import { getUrlParam } from 'utils/url'
 import { render } from 'utils/dom'
 import ajax from 'vendors/ajax'
 
+/* eslint-disable */
 const renderComponent = (meeting = {}) =>
   render({
     element: '#app',
@@ -22,9 +23,9 @@ const renderComponent = (meeting = {}) =>
           </div>
           <div class="meeting__main__tag">
             ${meeting.tags.reduce((acc, cur = {}) => {
-    const tag = `<div>${cur.tag}</div>`
-    return acc + tag
-  }, '')}
+              const tag = `<div>${cur.tag}</div>`
+              return acc + tag
+            }, '')}
           </div>
           ${meeting.content ? `<div class="meeting__main__subtitle">${meeting.content}</div>` : ''}
           <div>
@@ -42,24 +43,24 @@ const renderComponent = (meeting = {}) =>
               </div>
               <div class="body">
                 ${meeting.participants.reduce((acc, cur = {}) => {
-    const participant = `<span>${cur.name}</span>`
-    return acc + participant
-  }, '')}
+                  const participant = `<span>${cur.name}</span>`
+                  return acc + participant
+                }, '')}
               </div>
             </div>
             ${meeting.foreigner.length ?
-    `<div class="meeting__main__section">
+              `<div class="meeting__main__section">
                 <div class="head">
                   <div class="text">外部参会人</div>
                 </div>
                 <div class="body">
                   ${meeting.foreigner.reduce((acc, cur) => {
-    const foreigner = '<span>' + cur + '</span>'
-    return acc + foreigner
-  }, '')}
+                    const foreigner = '<span>' + cur + '</span>'
+                    return acc + foreigner
+                  }, '')}
                 </div>
               </div>`
-    : ''}
+            : ''}
           </div>
           <div class="meeting__main__footer">
             <img src="${logoImg}" />
@@ -68,6 +69,7 @@ const renderComponent = (meeting = {}) =>
       </div>
     `,
   })
+  /* eslint-enable */
 
 export default openid => {
   ajax
