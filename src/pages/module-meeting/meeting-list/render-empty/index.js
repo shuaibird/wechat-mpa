@@ -10,6 +10,6 @@ export default () => {
         <img src="${bgImg}" width="200" height="110" />
         <div>无会议安排</div>
       </div>
-    `
+    `,
   })
 }
