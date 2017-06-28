@@ -119,6 +119,13 @@ module.exports = (env) => {
       template,
       inlineCss,
     }),
+    build.page({
+      entry: { 'meeting-detail': path.resolve(PATHS.src, 'pages/module-meeting/meeting-detail') },
+      title: '会议详情',
+      filename: 'meeting-detail.html',
+      template,
+      inlineCss,
+    }),
   ]
   return pages.map(page => merge(commonConfig, config, page))
 }
