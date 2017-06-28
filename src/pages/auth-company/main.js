@@ -8,10 +8,9 @@ import { redirect } from 'utils/url'
 const searchCompany = name =>
   ajax
     .post('/company/search/', { name })
-    .then(({ data: { id, logo, name } }) => {
-      localStorage.setItem('id', id)
-      localStorage.setItem('logo', logo)
-      localStorage.setItem('name', name)
+    .then(({ data: { logo, name } }) => {
+      localStorage.setItem('company_logo', logo)
+      localStorage.setItem('company_name', name)
       redirect('auth-account.html')
     })
     .catch(() => alert('查找的企业不存在，请重新输入'))
@@ -32,6 +31,7 @@ const renderComponent = () =>
       </div>
     `,
   })
+
 
 const registerEventListener = () => {
   const $input = document.querySelector('.input')
