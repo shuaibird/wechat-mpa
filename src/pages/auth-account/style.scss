@@ -24,9 +24,9 @@
       text-align: center;
     }
 
-    .input {
+    .username,
+    .password {
       @extend %input;
-      margin-top: 300px;
     }
 
     .submit {

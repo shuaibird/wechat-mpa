@@ -28,6 +28,13 @@
   @include border-radius;
   height: 80px;
   font-size: 32px;
+}
+
+%button-primary {
+  @extend %button;
+  background: $color-primary;
+  border: none;
+  color: $color-white;
   &.is-disabled {
     background: rgb(229, 242, 255);
   }

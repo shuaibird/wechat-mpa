@@ -89,6 +89,12 @@ module.exports = (env) => {
       filename: 'auth-company.html',
       template: 'src/pages/auth-company/template.html',
     }),
+    build.page({
+      entry: { 'auth-account': path.resolve(PATHS.src, 'pages/auth-account') },
+      title: '绑定个人账号',
+      filename: 'auth-account.html',
+      template: 'src/pages/auth-account/template.html',
+    }),
   ]
   return pages.map(page => merge(commonConfig, config, page))
 }
