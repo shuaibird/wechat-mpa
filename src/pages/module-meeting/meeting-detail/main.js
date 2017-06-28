@@ -69,7 +69,7 @@ const renderComponent = (meeting = {}) =>
       </div>
     `,
   })
-  /* eslint-enable */
+/* eslint-enable */
 
 export default openid => {
   ajax
