@@ -103,6 +103,13 @@ module.exports = (env) => {
       template,
       inlineCss,
     }),
+    build.page({
+      entry: { 'auth-binded': path.resolve(PATHS.src, 'pages/auth-binded') },
+      title: '帐号绑定信息',
+      filename: 'auth-binded.html',
+      template,
+      inlineCss,
+    }),
   ]
   return pages.map(page => merge(commonConfig, config, page))
 }

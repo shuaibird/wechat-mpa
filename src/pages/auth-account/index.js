@@ -10,18 +10,25 @@ if (!companyName) {
   redirect('auth-company.html')
 } else {
   if (token) {
-    import('./main').then(({ default: loadModule }) => loadModule({
-      token,
-      companyName,
-      companyLogo,
-    }))
+    import('./main')
+      .then(({ default: loadModule }) =>
+        loadModule({
+          token,
+          companyName,
+          companyLogo,
+        })
+      )
   } else {
     wechat(
-      token => import('./main').then(({ default: loadModule }) => loadModule({
-        token,
-        companyName,
-        companyLogo,
-      })),
+      token =>
+        import('./main')
+          .then(({ default: loadModule }) =>
+            loadModule({
+              token,
+              companyName,
+              companyLogo,
+            })
+          ),
       'snsapi_userinfo'
     )
   }

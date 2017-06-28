@@ -28,22 +28,22 @@ const bindAccount = (token, company_name, username, password) =>
     })
 
 
-
-const renderComponent = (logo, name) => render({
-  element: '#app',
-  component: `
-    <img class="jumbotron" src="${jumbotron}" />
-    <div class="card-wrapper">
-      <div class="card">
-        ${logo ? `<img class="logo" src="${logo}" width="60" alt="公司logo" />` : ''}
-        <p class="company">${name}</p>
-        <input class="username" placeholder="个人帐号" ／>
-        <input class="password" placeholder="密码" ／>
-        <button class="submit is-disabled">确定绑定</button>
+const renderComponent = (logo, name) =>
+  render({
+    element: '#app',
+    component: `
+      <img class="jumbotron" src="${jumbotron}" />
+      <div class="card-wrapper">
+        <div class="card">
+          ${logo ? `<img class="logo" src="${logo}" width="60" alt="公司logo" />` : ''}
+          <p class="company">${name}</p>
+          <input class="username" placeholder="个人帐号" ／>
+          <input class="password" placeholder="密码" ／>
+          <button class="submit is-disabled">确定绑定</button>
+        </div>
       </div>
-    </div>
-  `,
-})
+    `,
+  })
 
 
 const registerEventListener = (token, company_name) => {

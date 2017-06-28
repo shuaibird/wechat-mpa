@@ -4,6 +4,27 @@
   width: 100%;
 }
 
+.tip {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  .icon,
+  .text {
+    position: relative;
+  }
+
+  .icon {
+    right: 12px;
+  }
+
+  .text {
+    bottom: 4px;
+    font-size: 20px;
+    color: $color-white;
+  }
+}
+
 .card-wrapper {
   width: 100%;
   padding: 0 15px;
@@ -23,20 +44,20 @@
       font-size: 18px;
       color: $color-gray-darker;
       text-align: center;
+      margin-bottom: 10px;
     }
 
-    .username,
-    .password {
-      @extend %input;
+    .user {
+      color: $color-black;
+      text-align: center;
+      font-size: 20px;
     }
 
-    .password {
-      margin-top: 20px;
-    }
-
-    .submit {
-      @extend %button-primary;
-      margin-top: 24px;
+    .unbind {
+      @extend %button;
+      margin-top: 175px;
+      border-color: $color-primary;
+      color: $color-primary;
     }
   }
 }

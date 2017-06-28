@@ -4,7 +4,7 @@
   "description": "Tox 微信前端",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch webpack.config.js --watch build --exec \"webpack-dev-server --env development\"",
+    "start": "nodemon --watch webpack.config.js --watch build --watch .eslintrc.js --exec \"webpack-dev-server --env development\"",
     "build": "webpack --env production",
     "lint:js": "eslint build src webpack.config.js --cache",
     "fix:js": "npm run lint:js -- --fix",

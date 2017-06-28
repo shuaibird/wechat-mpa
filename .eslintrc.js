@@ -6,6 +6,9 @@ module.exports = {
     es6: true,
     node: true,
   },
+  globals: {
+    "WeixinJSBridge": false,
+  },
   extends: 'eslint:recommended',
   parser: 'babel-eslint',
   parserOptions: {
