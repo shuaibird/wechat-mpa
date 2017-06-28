@@ -41,7 +41,10 @@ const developmentConfig = merge([
 const productionConfig = merge([
   {
     entry: {
-      vendor: ['./src/vendors/ajax.js'],
+      vendor: [
+        './src/vendors/ajax.js',
+        './src/vendors/wechat.js',
+      ],
     },
   },
   build.cleanDir({
@@ -84,12 +87,13 @@ const productionConfig = merge([
 module.exports = (env) => {
   const config = (env === 'production') ? productionConfig : developmentConfig
   const inlineCss = (env === 'production')
+  const template = 'src/pages/templates/default.html'
   const pages = [
     build.page({
       entry: { 'auth-company': path.resolve(PATHS.src, 'pages/auth-company') },
       title: '输入企业号',
       filename: 'auth-company.html',
-      template: 'src/pages/auth-company/template.html',
+      template,
       inlineCss,
     }),
     build.page({

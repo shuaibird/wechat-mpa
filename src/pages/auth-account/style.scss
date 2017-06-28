@@ -6,21 +6,21 @@
 
 .card-wrapper {
   width: 100%;
-  padding: 0 30px;
+  padding: 0 15px;
   position: absolute;
-  top: 120px;
+  top: 60px;
 
   .card {
     @extend %card;
 
     .logo {
       display: block;
-      margin: 0 auto 40px;
+      margin: 0 auto 20px;
       border-radius: 50%;
     }
 
     .company {
-      font-size: 54px;
+      font-size: 18px;
       color: $color-gray-darker;
       text-align: center;
     }
@@ -31,12 +31,12 @@
     }
 
     .password {
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     .submit {
       @extend %button-primary;
-      margin-top: 48px;
+      margin-top: 24px;
     }
   }
 }
