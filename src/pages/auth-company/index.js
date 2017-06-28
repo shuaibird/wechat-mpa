@@ -1,6 +1,7 @@
 import './style'
-import { hasClass, addClass, removeClass } from 'utils/dom'
 import ajax from 'vendors/ajax'
+import { hasClass, addClass, removeClass } from 'utils/dom'
+import { redirect } from 'utils/url'
 
 const input = document.querySelector('.input')
 const submit = document.querySelector('.submit')
@@ -22,7 +23,7 @@ submit.addEventListener('click', ({ currentTarget }) => {
       localStorage.setItem('id', res.id)
       localStorage.setItem('logo', res.logo)
       localStorage.setItem('name', res.name)
-      window.location.href = 'auth-accout.html'
+      redirect('auth-accout.html')
     })
     .catch(() => alert('查找的企业不存在，请重新输入'))
 })

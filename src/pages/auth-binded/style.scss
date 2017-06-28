@@ -1,0 +1,42 @@
+@import '~scss/index';
+
+.jumbotron {
+  width: 100%;
+}
+
+.card-wrapper {
+  width: 100%;
+  padding: 0 30px;
+  position: absolute;
+  top: 120px;
+
+  .card {
+    @extend %card;
+
+    .logo {
+      display: block;
+      margin: 0 auto 40px;
+      border-radius: 50%;
+    }
+
+    .company {
+      font-size: 54px;
+      color: $color-gray-darker;
+      text-align: center;
+    }
+
+    .username,
+    .password {
+      @extend %input;
+    }
+
+    .password {
+      margin-top: 40px;
+    }
+
+    .submit {
+      @extend %button-primary;
+      margin-top: 48px;
+    }
+  }
+}
