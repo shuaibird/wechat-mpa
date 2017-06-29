@@ -15,6 +15,7 @@ body {
   position: relative;
   border-radius: $default-border-radius;
   overflow-x: hidden;
+  background: $color-white;
 
   &__title {
     margin-top: 20px;

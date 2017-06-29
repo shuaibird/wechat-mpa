@@ -11,7 +11,7 @@ export default (list = [], openid) =>
   render({
     element: '#app',
     operation: 'append',
-    components: list.reduce((acc, cur = {}) => {
+    component: list.reduce((acc, cur = {}) => {
       const meeting = `
         <a href="meeting-detail.html?openId=${openid}&meetingId=${cur.meetingId}" class="meeting meeting--${cur.action}">
           <div class="meeting__title">${convertDate(cur.createdAt)}</div>

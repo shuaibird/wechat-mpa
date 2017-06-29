@@ -1,12 +1,12 @@
 $color-primary: rgb(59, 140, 243);
 $color-primary-darker: rgb(18, 91, 218);
 $color-primary-lighter: rgb(229, 242, 255);
-$color-primary-shadow: lighten($color-primary, 50%);
+$color-primary-shadow: rgba($color-primary, .5);
 
 $color-secondary: rgb(31, 204, 117);
 $color-secondary-darker: rgb(3, 143, 72);
 $color-secondary-lighter: rgb(226, 250, 226);
-$color-secondary-shadow: lighten($color-secondary, 50%);
+$color-secondary-shadow: rgba($color-secondary, .5);
 
 $color-black: rgb(41, 45, 51);
 $color-gray-darker: rgb(125, 137, 153);

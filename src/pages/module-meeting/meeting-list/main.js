@@ -9,7 +9,7 @@ const fetchList = openid => {
   if (offset && ((window.scrollY + window.innerHeight) < document.body.scrollHeight)) return
   if (offset) window.removeEventListener('scroll', fetchList)
   ajax
-    .get(`/wechat/my-meeings/?openid=${openid}&limit=${limit}&offset=${offset}`)
+    .get('/wechat/my-meetings/', { params: { openid, limit, offset } })
     .then(({ data }) => {
       if (!data.count) {
         import('./render-empty').then(({ default: loadModule }) => loadModule())
