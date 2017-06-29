@@ -7,7 +7,7 @@ import ajax from 'vendors/ajax'
 
 const bindAccount = (token, company_name, username, password) =>
   ajax
-    .put('/wechat/binding-info/', {
+    .post('/wechat/binding-info/', {
       token,
       company_name,
       username,
