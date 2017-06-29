@@ -1,5 +1,5 @@
 import wechat from 'vendors/wechat'
 
 wechat(
-  ({ openid } = {}) => import('./main').then(({ default: { loadModule } }) => loadModule(openid))
+  ({ openid } = {}) => import('./main').then(({ default: loadModule }) => loadModule(openid))
 )
