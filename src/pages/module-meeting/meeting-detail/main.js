@@ -14,7 +14,7 @@ const renderComponent = (meeting = {}) =>
       <div class="meeting meeting--${meeting.role}">
         <div class="meeting__jumbotron">
           <div class="meeting__jumbotron__title">${isoDate(meeting.startAt)} ${isoTime(meeting.startAt)}</div>
-          <div class="meeting__jumbotron__subtitle">${meeting.room.name}</div>
+          <div class="meeting__jumbotron__subtitle">${meeting.room.name}${meeting.room.location ? ` &middot ${meeting.room.location}` : ''}</div>
         </div>
         <div class="meeting__main">
           <div class="meeting__main__title">

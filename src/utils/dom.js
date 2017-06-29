@@ -10,7 +10,6 @@ export const removeClass = (element, className) => {
 }
 
 export const render = ({ element, component, operation } = {}) => {
-  console.log(component)
   const collapsedComponent = component.replace(/\n/g, '').replace(/>[ ]+</g, '><')
   const container = (typeof element === 'string') ? document.querySelector(element) : container
   switch (operation) {
