@@ -37,6 +37,6 @@
   border: none;
   color: $color-white;
   &.is-disabled {
-    background: rgb(229, 242, 255);
+    background: $color-primary-lighter;
   }
 }
