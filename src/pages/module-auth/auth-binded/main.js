@@ -6,7 +6,7 @@ import ajax from 'vendors/ajax'
 
 const unbindAccount = openid =>
   ajax
-    .delete('/wechat/binding-info/', { openid })
+    .delete('/wechat/binding-info/', { params: { openid } })
     .then(() => WeixinJSBridge.invoke('closeWindow', {}, () => localStorage.clear()))
     .catch(() => alert('解绑失败'))
 

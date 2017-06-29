@@ -5,7 +5,7 @@ import { redirect } from 'utils/url'
 wechat(
   ({ openid } = {}) =>
     ajax
-      .get('/wechat/binding-info/', { openid })
+      .get('/wechat/binding-info/', { params: { openid } })
       .then(({ data: { company: { logo, name }, user: { username } } }) =>
         import('./main')
           .then(({ default: loadModule }) =>
