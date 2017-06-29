@@ -66,6 +66,7 @@ const renderComponent = (meeting = {}) =>
             <img src="${logoImg}" />
           </div>
         </div>
+        <div class="meeting__mask"></div>
       </div>
     `,
   })

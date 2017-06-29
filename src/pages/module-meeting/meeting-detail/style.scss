@@ -12,8 +12,10 @@ body {
     padding-top: 30px;
 
     * {
+      position: relative;
       color: $color-white;
       text-align: center;
+      z-index: 2;
     }
 
     &__title {
@@ -27,6 +29,8 @@ body {
   }
 
   &__main {
+    position: relative;
+    z-index: 2;
     margin-top: -90px;
     margin-left: 15px;
     margin-right: 15px;
@@ -48,7 +52,7 @@ body {
         display: inline-block;
         padding: 5px 8px;
         font-size: 12px;
-        border-radius: $default-border-radius;
+        border-radius: 2px;
         &:not(:first-child) {
           margin-left: 6px;
         }
@@ -57,7 +61,7 @@ body {
 
     &__subtitle {
       font-size: 15px;
-      line-height: 1.25;
+      line-height: 1.5;
       color: $color-black;
       margin: 0 20px;
       padding: 20px 0;
@@ -100,15 +104,22 @@ body {
       }
     }
   }
+
+  &__mask {
+    width: 110%;
+    height: 180px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    transform: rotate(-10deg);
+    transform-origin: 0 100%;
+  }
 }
 
 /* variants */
 .meeting--participant {
   .meeting {
-    &__jumbotron {
-      background: $color-primary;
-      background: linear-gradient(to right, $color-primary-darker, $color-primary);
-    }
     &__main {
       @include box-shadow($color: $color-primary-shadow);
       &__tag {
@@ -125,15 +136,15 @@ body {
         }
       }
     }
+    &__mask {
+      background: $color-primary;
+      background: linear-gradient(30deg, $color-primary-darker, $color-primary);
+    }
   }
 }
 
 .meeting--host {
   .meeting {
-    &__jumbotron {
-      background: $color-secondary;
-      background: linear-gradient(to right, $color-secondary-darker, $color-secondary);
-    }
     &__main {
       @include box-shadow($color: $color-secondary-shadow);
       &__tag {
@@ -149,6 +160,10 @@ body {
           }
         }
       }
+    }
+    &__mask {
+      background: $color-secondary;
+      background: linear-gradient(30deg, $color-secondary-darker, $color-secondary);
     }
   }
 }
