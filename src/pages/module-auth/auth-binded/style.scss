@@ -58,7 +58,7 @@
     .unbind {
       @extend %button;
       margin-top: 175px;
-      border-color: $color-primary;
+      border: 1px solid $color-primary;
       color: $color-primary;
     }
   }

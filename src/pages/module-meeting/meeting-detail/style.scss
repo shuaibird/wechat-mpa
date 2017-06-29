@@ -31,7 +31,7 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     background: $color-white;
-    border-radius: 2px;
+    border-radius: $default-border-radius;
 
     &__title {
       padding: 30px 20px 10px;
@@ -48,7 +48,7 @@ body {
         display: inline-block;
         padding: 5px 8px;
         font-size: 12px;
-        border-radius: 1px;
+        border-radius: $default-border-radius;
         &:not(:first-child) {
           margin-left: 6px;
         }
@@ -56,7 +56,7 @@ body {
     }
 
     &__subtitle {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.25;
       color: $color-black;
       margin: 0 20px;
@@ -79,21 +79,20 @@ body {
       .body {
         * {
           color: $color-black;
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.25;
           display: inline-block;
-          width: 64px;
-          margin-right: 10px;
+          width: 25%;
+          padding-right: 10px;
           @include ellipsis;
         }
       }
     }
-
-    &__footer {
+     &__footer {
       margin-top: 20px;
       height: 32px;
       width: 100%;
-      background: rgba(242, 244, 247, .5);
+      background: rgba($color-gray-lighter, .5);
       text-align: center;
       padding: 7px 0;
       img {
