@@ -22,6 +22,9 @@ $ npm run fix:js
 
 # scss linting
 $ npm run lint:scss
+
+# get bundle module stats
+$ npm run stats
 ```
 
 
