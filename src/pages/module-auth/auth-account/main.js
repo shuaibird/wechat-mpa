@@ -2,7 +2,7 @@ import './style'
 import jumbotron from 'images/auth-jumbotron.png'
 import { hasClass, addClass, removeClass, render } from 'utils/dom'
 import { redirect } from 'utils/url'
-import ajax from 'vendors/ajax'
+import ajax from 'utils/ajax'
 
 
 const bindAccount = (token, company_name, username, password) =>

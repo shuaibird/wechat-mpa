@@ -1,4 +1,4 @@
-import ajax from 'vendors/ajax'
+import ajax from 'utils/ajax'
 import { redirect, getUrlParam, delUrlParam } from 'utils/url'
 
 const oauth = scope =>

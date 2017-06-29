@@ -1,4 +1,4 @@
-import wechat from 'vendors/wechat'
+import wechat from 'utils/wechat'
 import { redirect } from 'utils/url'
 
 const token = JSON.parse(localStorage.getItem('wx_token'))

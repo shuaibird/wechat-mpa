@@ -1,5 +1,5 @@
-import wechat from 'vendors/wechat'
-import ajax from 'vendors/ajax'
+import wechat from 'utils/wechat'
+import ajax from 'utils/ajax'
 import { redirect } from 'utils/url'
 
 wechat(

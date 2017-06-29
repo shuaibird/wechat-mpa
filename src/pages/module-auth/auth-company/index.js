@@ -1,4 +1,4 @@
-import wechat from 'vendors/wechat'
+import wechat from 'utils/wechat'
 
 wechat(
   () => import('./main').then(({ default: loadModule }) => loadModule()),

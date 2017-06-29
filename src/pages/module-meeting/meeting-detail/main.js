@@ -4,7 +4,7 @@ import logoImg from 'images/logo-watermark.png'
 import { isoDate, isoTime } from 'utils/iso'
 import { getUrlParam } from 'utils/url'
 import { render } from 'utils/dom'
-import ajax from 'vendors/ajax'
+import ajax from 'utils/ajax'
 
 /* eslint-disable */
 const renderComponent = (meeting = {}) =>

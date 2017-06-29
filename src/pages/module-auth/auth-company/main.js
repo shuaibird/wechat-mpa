@@ -1,7 +1,7 @@
 import './style'
 import jumbotron from 'images/auth-jumbotron.png'
 import logo from 'images/logo.png'
-import ajax from 'vendors/ajax'
+import ajax from 'utils/ajax'
 import { hasClass, addClass, removeClass, render } from 'utils/dom'
 import { redirect } from 'utils/url'
 

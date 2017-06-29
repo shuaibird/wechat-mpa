@@ -1,5 +1,5 @@
 import './style'
-import ajax from 'vendors/ajax'
+import ajax from 'utils/ajax'
 import { redirect } from 'utils/url'
 
 const limit = 5

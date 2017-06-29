@@ -11,6 +11,7 @@ const commonConfig = merge([
   {
     output: {
       path: PATHS.dist,
+      publicPath: '/',
       filename: '[name].[hash].js',
     },
   },
@@ -39,14 +40,6 @@ const developmentConfig = merge([
 ])
 
 const productionConfig = merge([
-  {
-    entry: {
-      vendor: [
-        './src/vendors/ajax.js',
-        './src/vendors/wechat.js',
-      ],
-    },
-  },
   build.cleanDir({
     path: PATHS.dist,
     root: __dirname,
@@ -70,17 +63,6 @@ const productionConfig = merge([
   build.defineConst({
     'HOST': '""',
   }),
-  build.extractBundles([
-    {
-      name: 'vendor',
-      filename: '[name].js',
-      minChunks: ({ resource }) => (
-        resource &&
-        resource.indexOf('node_modules') >= 0 &&
-        resource.match(/\.js$/)
-      ),
-    },
-  ]),
   build.generateSourceMaps({ type: 'source-map' }),
 ])
 

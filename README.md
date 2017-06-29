@@ -11,7 +11,7 @@ $ npm start
 # start the webpack dev server
 $ npm start
 
-# build the production release
+# build the production release and generate stats.json file
 $ npm run build
 
 # js linting check, as the eslint-loader has already been used, this script is mostly used for the webpack config files
@@ -22,9 +22,6 @@ $ npm run fix:js
 
 # scss linting
 $ npm run lint:scss
-
-# get bundle module stats
-$ npm run stats
 ```
 
 
@@ -41,8 +38,6 @@ $ npm run stats
 * **src/templates**: The templates for the `HtmlWepackPlugin` go inside here. Like the `images` folder, include only the commonly used ones here.
 
 * **src/utils**: Helper functions.
-
-* **src/vendors**: The scripts inside would be pulled out from the code into a separate `vendor` script, which would be included in every generated html page. Config the webpack when a script need to including as a part of the `vendor`.
 
 ## others
 * Install the [EditorConfig](http://editorconfig.org/) plugin for consistent indentation throughout the whole project.

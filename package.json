@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch webpack.config.js --watch build --watch .eslintrc.js --exec \"webpack-dev-server --env development\"",
-    "build": "webpack --env production",
+    "build": "webpack --env production --profile --json > stats.json",
     "lint:js": "eslint build src webpack.config.js --cache",
     "fix:js": "npm run lint:js -- --fix",
-    "lint:scss": "stylelint src/**/*.scss",
-    "stats": "webpack --env production --profile --json > stats.json"
+    "lint:scss": "stylelint src/**/*.scss"
   },
   "keywords": [],
   "author": "Shuaibird",

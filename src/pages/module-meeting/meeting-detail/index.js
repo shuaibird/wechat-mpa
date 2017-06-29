@@ -1,5 +1,5 @@
 import { getUrlParam } from 'utils/url'
-import wechat from 'vendors/wechat'
+import wechat from 'utils/wechat'
 
 const openid = getUrlParam('openId')
 

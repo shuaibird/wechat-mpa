@@ -2,7 +2,7 @@ import './style'
 import jumbotron from 'images/auth-jumbotron.png'
 import tick from './tick.png'
 import { render } from 'utils/dom'
-import ajax from 'vendors/ajax'
+import ajax from 'utils/ajax'
 
 const unbindAccount = openid =>
   ajax
